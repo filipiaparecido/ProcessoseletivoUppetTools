@@ -16,7 +16,7 @@ namespace ProcessoseletivoUppetTools.Libraries.ApisExt
     {
         private string URL = "http://ws.hubdodesenvolvedor.com.br/v2/cnpj/?";
         private string parametros = "?formato=json";
-        private string token = // pegar o token do site https://www.hubdodesenvolvedor.com.b
+        private string token = // colocar  o token do site https://www.hubdodesenvolvedor.com.br
 
 
         public Root RetornoApi(string Cnpj)
