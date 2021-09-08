@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check All plugin</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./jquery.checkAll.js"></script>
+</head>
+<body>
+    <h1>Check All plugin</h1>
+    <h2>Default usage</h2>
+    <p>Select closest form element as scope</p>
+    <form action="">
+        <table>
+            <thead>
+                <tr>
+                    <th><input class="check-all" type="checkbox" name="" id=""></th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <form action="">
+        <table>
+            <thead>
+                <tr>
+                    <th><input class="check-all" type="checkbox" name="" id=""></th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <pre>
+    &lt;script type="text/javascript">
+
+        // default usage
+        $('.check-all').checkAll();
+        
+    &lt;/script>
+    </pre>
+    <script type="text/javascript">
+
+        // default usage
+        $('.check-all').checkAll();
+        
+    </script>
+    <h2>CallBack (open your dev console)</h2>
+    <form action="">
+        <table>
+            <thead>
+                <tr>
+                    <th><input class="check-all-callback" type="checkbox" name="" id=""></th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <pre>
+    &lt;script type="text/javascript">
+
+        // callback usage
+
+        $('.check-all-callback').checkAll({
+            onMasterClick: function($master_checkbox, $scope) {
+                console.log($master_checkbox);
+                console.log($scope);
+            },
+            onScopeChange: function($master_checkbox, $changed_checkbox, $scope) {
+                console.log($master_checkbox);
+                console.log($changed_checkbox);
+                console.log($scope);
+            }
+        });
+
+    &lt;/script>
+    </pre>
+    <script type="text/javascript">
+        // Callback usage
+        $('.check-all-callback').checkAll({
+            onMasterClick: function($master_checkbox, $scope) {
+                console.log($master_checkbox);
+                console.log($scope);
+            },
+            onScopeChange: function($master_checkbox, $changed_checkbox, $scope) {
+                console.log($master_checkbox);
+                console.log($changed_checkbox);
+                console.log($scope);
+            }
+        });
+    </script>
+    <h2>Specific Scopes</h2>
+    <p>Select Specific Scopes to check All</p>
+    <label><input class="group-a-check-all" type="checkbox" name="" id="">Group A</label>
+    <label><input class="group-b-check-all" type="checkbox" name="" id="">Group B</label>
+    <label><input class="group-all-check-all" type="checkbox" name="" id="">Check All</label>
+    <div class="clear"></div>
+    <form class="clearfix group-all" action="">
+        <table class="group-a">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Group A Table</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="group-b">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Group B Table</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="group-a">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Group A Table</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>Somebody Name</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <pre>
+        &lt;script type="text/javascript">
+            // Specific scope usage
+            $('.group-a-check-all').checkAll({
+                scope: $('.group-a')
+            });
+
+            $('.group-b-check-all').checkAll({
+                scope: $('.group-b')
+            });
+
+            $('.group-all-check-all').checkAll({
+                scope: $('.group-all')
+            });
+        &lt;/script>
+    </pre>
+    <script type="text/javascript">
+        // Specific scope usage
+        $('.group-a-check-all').checkAll({
+            scope: $('.group-a')
+        });
+
+        $('.group-b-check-all').checkAll({
+            scope: $('.group-b')
+        });
+
+        $('.group-all-check-all').checkAll({
+            scope: $('.group-all')
+        });
+    </script>
+</body>
+</html>
